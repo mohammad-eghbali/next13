@@ -1,16 +1,23 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { Partytown } from "@builder.io/partytown/react";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <Partytown debug={true} forward={["dataLayer.push"]} />
+      </Head>
       <Script
         async
+        type="text/partytown"
         src="https://www.googletagmanager.com/gtag/js?id=G-DD869VZF1Y"
       />
       <Script
         id="show-banner"
+        type="text/partytown"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `  window.dataLayer = window.dataLayer || [];
