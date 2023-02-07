@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <Partytown debug={true} forward={["dataLayer.push"]} />
       </Head>
+      <Script src="/scripts/proxy.js" />
       <Script
         type="text/partytown"
         src="https://www.googletagmanager.com/gtag/js?id=G-DD869VZF1Y"
@@ -18,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         id="gtm"
         type="text/partytown"
         dangerouslySetInnerHTML={{
-          __html: `  window.dataLayer = window.dataLayer || [];
+          __html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
