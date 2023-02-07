@@ -11,7 +11,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <Partytown debug={true} forward={["dataLayer.push"]} />
       </Head>
 
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-DD869VZF1Y" />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-DD869VZF1Y"
+        strategy="afterInteractive"
+      />
       <Script
         id="show-banner"
         strategy="afterInteractive"
