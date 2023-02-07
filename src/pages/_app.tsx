@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-DD869VZF1Y"
+        strategy="worker"
       />
       <Script
         id="show-banner"
