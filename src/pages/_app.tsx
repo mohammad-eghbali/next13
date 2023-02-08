@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <Partytown debug={true} forward={["dataLayer.push"]} />
       </Head>
-      <Script src="/scripts/proxy.js" />
+      {/* <Script src="/scripts/proxy.js" /> */}
       <Script
         type="text/partytown"
         src="https://www.googletagmanager.com/gtag/js?id=G-DD869VZF1Y"
