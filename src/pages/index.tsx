@@ -18,6 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1>Test 2</h1>
         <Link href="/test">go to test page 1</Link>
+        <Link href="/test2">go to test page 2</Link>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
